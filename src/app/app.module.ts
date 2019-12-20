@@ -29,7 +29,7 @@ const appRoutes: Routes=[
   {path:'',component:EtudiantListComponent },
   {path:'new_etudiant',component:NewEtudiantComponent},
   {path:'groupes',component:GroupeListComponent},
-  
+  {path:'new_groupe',component:NewGroupComponent},
 ]
 
 @NgModule({
