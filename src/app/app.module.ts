@@ -16,6 +16,16 @@ import {EtudiantService} from './services/EtudiantService';
 import { NewEtudiantComponent } from './new-etudiant/new-etudiant.component';
 import {ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { AuthComponent } from './auth/auth.component';
+import { Routes, RouterModule } from '@angular/router';
+
+import { from } from 'rxjs';
+const appRoutes: Routes=[
+  {path:'etudiants',component:EtudiantListComponent },
+  {path:'auth',component:AuthComponent},
+  {path:'',component:EtudiantListComponent },
+]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +33,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     EformComponent,
     EtudiantListComponent,
     GroupeComponent,
-    NewEtudiantComponent
+    NewEtudiantComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -34,8 +45,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatInputModule,
     MatListModule,
     ReactiveFormsModule,
-    MatFormFieldModule
-
+    MatFormFieldModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [EtudiantService],
   bootstrap: [AppComponent]
