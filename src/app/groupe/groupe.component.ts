@@ -10,7 +10,7 @@ export class GroupeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.groupeName = 'ipssi';
+    
   }
 
 }

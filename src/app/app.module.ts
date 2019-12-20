@@ -22,11 +22,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { from } from 'rxjs';
 import { NewGroupComponent } from './new-group/new-group.component';
 import { GroupeListComponent } from './groupe-list/groupe-list.component';
+import { GroupeService } from './services/GroupeService';
 const appRoutes: Routes=[
   {path:'etudiants',component:EtudiantListComponent },
   {path:'auth',component:AuthComponent},
   {path:'',component:EtudiantListComponent },
-  {path:'new_etudiant',component:NewEtudiantComponent}
+  {path:'new_etudiant',component:NewEtudiantComponent},
+  {path:'groupes',component:GroupeListComponent},
+  
 ]
 
 @NgModule({
@@ -53,7 +56,7 @@ const appRoutes: Routes=[
     MatFormFieldModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [EtudiantService],
+  providers: [EtudiantService,GroupeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
