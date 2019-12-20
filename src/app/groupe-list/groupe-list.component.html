@@ -1,0 +1,15 @@
+<ul class="list-group">
+    <li  *ngFor="let groupe of groupes">
+        <p><b>Nom:</b> {{groupe.name}}</p>
+        <p><b>Sujet:</b> {{groupe.sujet}}</p>
+        <p><b>Description:</b> {{groupe.description}}</p>
+        <ul class="list-group">
+            <li *ngFor="let etudiant of groupes.etudiants">
+                <p><b>Prenom:</b> {{etudiant.firstName}}</p>
+                <p><b>Nom:</b> {{etudiant.lastName}}</p>
+                <p><b>email:</b> {{etudiant.email}}</p>
+                <p><b>classe:</b> {{etudiant.classe}}</p>
+            </li>
+        </ul>
+    </li>
+</ul>
