@@ -20,10 +20,13 @@ import { AuthComponent } from './auth/auth.component';
 import { Routes, RouterModule } from '@angular/router';
 
 import { from } from 'rxjs';
+import { NewGroupComponent } from './new-group/new-group.component';
+import { GroupeListComponent } from './groupe-list/groupe-list.component';
 const appRoutes: Routes=[
   {path:'etudiants',component:EtudiantListComponent },
   {path:'auth',component:AuthComponent},
   {path:'',component:EtudiantListComponent },
+  {path:'new_etudiant',component:NewEtudiantComponent}
 ]
 
 @NgModule({
@@ -34,7 +37,9 @@ const appRoutes: Routes=[
     EtudiantListComponent,
     GroupeComponent,
     NewEtudiantComponent,
-    AuthComponent
+    AuthComponent,
+    NewGroupComponent,
+    GroupeListComponent
   ],
   imports: [
     BrowserModule,
